@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const editText = document.getElementById('editText');
 
     document.addEventListener('keydown', function(event) {
-        if (event.ctrlKey && event.key === 'e') {
+        if (event.ctrlKey && (event.key === 'e'|| event.key === 'у')) {
             event.preventDefault();
             editText.value = displayText.innerText;
             displayText.style.display = 'none';
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
             editText.focus();
         }
 
-        if (event.ctrlKey && event.key === 's') {
+        if (event.ctrlKey && (event.key === 's'|| event.key === 'ы')){
             event.preventDefault();
             displayText.innerText = editText.value;
             editText.style.display = 'none';
